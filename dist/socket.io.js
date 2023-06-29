@@ -2055,6 +2055,7 @@
               this.onError(err);
               break;
             case "message":
+              this.resetPingTimeout();
               this.emitReserved("data", packet.data);
               this.emitReserved("message", packet.data);
               break;
